@@ -16,3 +16,6 @@ Stage: final
 
 %files from compile
 	/usr/local/bin/wavbreaker /usr/bin/wavbreaker
+
+%post
+	apk add --update glib-dev libao-dev gtk+3.0-dev
