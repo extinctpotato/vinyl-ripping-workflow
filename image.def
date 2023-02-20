@@ -6,7 +6,7 @@ Stage: compile
 	apk add --update alpine-sdk meson git cmake glib-dev libao-dev gtk+3.0-dev
 	git clone https://github.com/thp/wavbreaker.git
 	cd wavbreaker
-	meson build
+	meson -Dmoodbar=false build
 	ninja -C build
 	ninja -C build install
 
