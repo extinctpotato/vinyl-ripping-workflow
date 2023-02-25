@@ -1,3 +1,6 @@
 [submodule "wavbreaker"]
 	path = wavbreaker
 	url = https://github.com/thp/wavbreaker.git
+[submodule "vinyl-ripping-helpers"]
+	path = vinyl-ripping-helpers
+	url = https://github.com/extinctpotato/vinyl-ripping-helpers.git
