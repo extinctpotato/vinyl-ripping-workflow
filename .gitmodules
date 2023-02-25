@@ -1,0 +1,3 @@
+[submodule "wavbreaker"]
+	path = wavbreaker
+	url = https://github.com/thp/wavbreaker.git

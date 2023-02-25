@@ -2,10 +2,12 @@ Bootstrap: docker
 From: alpine:3.17.2
 Stage: compile
 
+%files 
+	wavbreaker /usr/src/wavbreaker
+
 %post
-	apk add --update alpine-sdk meson git cmake glib-dev libao-dev gtk+3.0-dev
-	git clone https://github.com/thp/wavbreaker.git
-	cd wavbreaker
+	apk add --update alpine-sdk meson cmake glib-dev libao-dev gtk+3.0-dev
+	cd /usr/src/wavbreaker
 	meson -Dmoodbar=false build
 	ninja -C build
 	ninja -C build install
