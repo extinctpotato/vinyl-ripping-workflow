@@ -16,6 +16,9 @@ Stage: final
 
 %files from compile
 	/usr/local/bin/wavbreaker /usr/bin/wavbreaker
+	/usr/local/share/applications
+	/usr/local/share/metainfo
+	/usr/local/share/icons/hicolor/scalable/apps
 
 %post
 	apk add --update --no-cache glib libao gtk+3.0
