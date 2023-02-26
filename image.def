@@ -22,5 +22,14 @@ Stage: final
 	/usr/local/share/metainfo
 	/usr/local/share/icons/hicolor/scalable/apps
 
+%files
+	vinyl-ripping-helpers/vriphelper.py /opt/vriphelpers/
+	vinyl-ripping-helpers/requirements.txt /opt/vriphelpers/
+
 %post
+	# Wavbreaker dependencies
 	apk add --update --no-cache glib libao gtk+3.0
+	# vinyl-ripping-helper dependencies
+	apk add --update --no-cache python3 py3-pip py3-numpy sox
+	pip3 install sox 
+	ln -s /opt/vriphelpers/vriphelper.py /usr/bin/vriphelper
